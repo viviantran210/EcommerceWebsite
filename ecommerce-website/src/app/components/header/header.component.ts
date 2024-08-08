@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterLinkActive} from '@angular/router';
 
 
@@ -8,10 +9,11 @@ import { RouterLink, RouterLinkActive} from '@angular/router';
   imports: [
     RouterLink,
     RouterLinkActive,
+    FormsModule,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-
+  searchQuery: string = '';
 }
