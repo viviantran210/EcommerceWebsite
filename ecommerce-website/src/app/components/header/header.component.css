@@ -77,18 +77,10 @@
 
 .dropdown-content a:hover {
   background-color: #ebebeb;
-<<<<<<< HEAD
   display: block;
   padding: 0.8rem 1rem;
   margin: 0;
   border-left:solid 0.5rem transparent;
-=======
-  width: 90%;
-  display: block;
-  margin: 0;
-  padding: 0.8 1rem;
-  text-align: left;
->>>>>>> 2625fd7f8c63dbf87f3fa757b2848a44e8b62a31
 }
 
 .nav .search-container {
