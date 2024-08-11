@@ -118,6 +118,19 @@
   cursor: pointer;
 }
 
+.fa-shopping-cart {
+  font-size: 2rem; 
+  padding: 0.5rem; 
+  border-radius: 50%; 
+  background-color: #f1f1f1d9; 
+}
+
+/* Hover effect */
+.fa-shopping-cart:hover {
+  color: white;
+  background-color: black; 
+}
+
 h1 {
   margin: 0 1rem;
 }
