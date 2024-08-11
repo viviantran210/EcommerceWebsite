@@ -257,7 +257,7 @@
     width: 100%;
     height: 520px;
     background-color: #d9d9d9;
-    background-image: url("https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/sc23.png");
+    /*background-image: url("https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/sc23.png");*/
     background-size: cover;
     background-position-x: 50%;
     background-position-y: 50%;
