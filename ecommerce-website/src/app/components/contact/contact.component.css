@@ -1,3 +1,7 @@
+h1 {
+  text-align: center;
+}
+
 .contact_us * {
   font-family: Nunito, sans-serif;
 }
@@ -90,16 +94,16 @@
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
-  margin-top: 90px;
+  margin-top: 20px;
   margin-right: 0px;
   margin-bottom: 60px;
   margin-left: 0px;
 }
 
 .contact_us .text-blk.contactus-head {
-  font-size: 36px;
+  font-size: 28px;
   line-height: 52px;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .contact_us .text-blk.contactus-subhead {
@@ -252,7 +256,7 @@
 }
 
 .contact_us .map-box {
-  max-width: 50rem;
+  max-width: 800px;
   max-height: 520px;
   width: 100%;
   height: 520px;
