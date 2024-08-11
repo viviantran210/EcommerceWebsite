@@ -43,8 +43,8 @@
   padding:  0.5rem;
   color: #000;
   background-color: inherit;
-  font-family: inherit; 
-  margin: 0; 
+  font-family: inherit;
+  margin: 0;
 }
 
 .dropdown .dropbtn:hover {
@@ -66,7 +66,7 @@
   padding: 0.8rem 1rem;
   text-decoration: none;
   display: block;
-  text-align: left;
+
 }
 
 .dropdown:hover .dropdown-content {
@@ -77,10 +77,18 @@
 
 .dropdown-content a:hover {
   background-color: #ebebeb;
+<<<<<<< HEAD
   display: block;
   padding: 0.8rem 1rem;
   margin: 0;
   border-left:solid 0.5rem transparent;
+=======
+  width: 90%;
+  display: block;
+  margin: 0;
+  padding: 0.8 1rem;
+  text-align: left;
+>>>>>>> 2625fd7f8c63dbf87f3fa757b2848a44e8b62a31
 }
 
 .nav .search-container {
