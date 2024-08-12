@@ -1,5 +1,6 @@
 <h1>{{ categoryName }}</h1>
-  <div *ngFor="let p of products" class="product-box">
+<div class="product-grid">
+  <div *ngFor="let p of productList" class="product-box">
     <img [src]="p.productImgUrl" [alt]="p.productName">
     <h3 class="product-title">{{ p.productName }}</h3>
     <p class="product-price">${{ p.price }}</p>

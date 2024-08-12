@@ -10,5 +10,5 @@ import { CommonModule } from '@angular/common';
 })
 export class CategoryComponent {
   @Input() categoryName!: string;
-  @Input() products: any[] = [];
+  @Input() productList: any[] = [];
 }

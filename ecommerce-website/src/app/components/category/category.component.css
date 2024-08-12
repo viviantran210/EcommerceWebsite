@@ -10,13 +10,11 @@ h1 {
 }
 
 .product-box {
-  /*flex: 1 1 calc(10% - 1rem);*/
-  width: 20rem; /* Set the width of each product box */
-  height: 30rem; /* Set the height of each product box */
+  flex: 1 1 calc(20% - 1rem);
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 0.3rem;
-  padding: 4rem;
+  padding: 2rem;
   text-align: center;
   box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
@@ -27,14 +25,14 @@ h1 {
 }
 
 .product-box img {
+  height: 15rem;
   max-width: 20rem;
-  height: 20rem;
-  border-bottom: 1px solid #eee;
+  object-fit: cover;
   margin-bottom: 1rem;
 }
 
 .product-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0.5rem 0;
   color: #333;
 }
