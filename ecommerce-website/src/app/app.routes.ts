@@ -8,9 +8,6 @@ import { ClothesComponent } from './components/categories/clothes/clothes.compon
 
 export const routes: Routes = [
   {
-    path: '', redirectTo: '/home', pathMatch: 'full'
-  },
-  {
     path: 'home',
     component: HomeComponent
   },
@@ -34,4 +31,7 @@ export const routes: Routes = [
     path: 'clothes',
     component: ClothesComponent
   },
+  {
+    path: '', redirectTo: '/home', pathMatch: 'full'
+  }
 ];
