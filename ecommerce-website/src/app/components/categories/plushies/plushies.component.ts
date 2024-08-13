@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CategoryComponent } from '../../category/category.component';
+import { ProductComponent } from '../../product/product.component';
 
 @Component({
   selector: 'app-plushies',
   standalone: true,
-  imports: [CommonModule, CategoryComponent],
+  imports: [CommonModule, ProductComponent],
   templateUrl: './plushies.component.html',
 })
 export class PlushiesComponent {

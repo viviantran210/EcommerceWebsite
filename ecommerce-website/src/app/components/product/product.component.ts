@@ -2,13 +2,13 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-category',
+  selector: 'app-product',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './category.component.html',
-  styleUrl: './category.component.css'
+  templateUrl: './product.component.html',
+  styleUrl: './product.component.css'
 })
-export class CategoryComponent {
+export class ProductComponent {
   @Input() categoryName!: string;
   @Input() productList: any[] = [];
 }

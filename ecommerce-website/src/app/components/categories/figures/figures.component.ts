@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CategoryComponent } from '../../category/category.component';
+import { ProductComponent } from '../../product/product.component';
 
 @Component({
   selector: 'app-figures',
   standalone: true,
-  imports: [CommonModule, CategoryComponent],
+  imports: [CommonModule, ProductComponent],
   templateUrl: './figures.component.html',
 })
 export class FiguresComponent implements OnInit {
