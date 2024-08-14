@@ -5,6 +5,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FiguresComponent } from './components/categories/figures/figures.component';
 import { PlushiesComponent } from './components/categories/plushies/plushies.component';
 import { ClothesComponent } from './components/categories/clothes/clothes.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component'
 
 export const routes: Routes = [
   {
@@ -17,19 +18,31 @@ export const routes: Routes = [
   },
   {
     path: 'contact',
-    component: ContactComponent
+    component: ContactComponent,
   },
   {
     path: 'figures',
-    component: FiguresComponent
+    component: FiguresComponent,
+  },
+  {
+    path: 'figures/:id',
+    component: ProductDetailsComponent,
   },
   {
     path: 'plushies',
     component: PlushiesComponent
   },
   {
+    path: 'plushies/:id',
+    component: ProductDetailsComponent
+  },
+  {
     path: 'clothes',
     component: ClothesComponent
+  },
+  {
+    path: 'clothes/:id',
+    component: ProductDetailsComponent
   },
   {
     path: '', redirectTo: '/home', pathMatch: 'full'
