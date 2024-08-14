@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink, RouterModule } from '@angular/router';
 import { ProductService } from '../../service/product.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-product',
@@ -12,14 +13,12 @@ import { ProductService } from '../../service/product.service';
 })
 export class ProductComponent implements OnInit {
   @Input() categoryName!: string;
-  @Input() productList: any[] = [];
+  productList$!:  Observable<any[]>;
 
   constructor(private productService: ProductService, private router: Router) {}
 
   ngOnInit() {
-    this.productService.getProductsByCategory(this.categoryName).subscribe(products => {
-      this.productList = products;
-    });
+    this.productList$ = this.productService.getProductsByCategory(this.categoryName);
   }
 
   public navigateToProduct(product: any) {

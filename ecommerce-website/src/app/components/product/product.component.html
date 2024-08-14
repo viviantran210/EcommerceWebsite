@@ -1,6 +1,6 @@
 <h1>{{ categoryName }}</h1>
 <div class="product-grid">
-  <div *ngFor="let product of productList" class="product-box" (click)="navigateToProduct(product)">
+  <div *ngFor="let product of productList$ | async" class="product-box" (click)="navigateToProduct(product)">
     <img [src]="product.productImgUrl" [alt]="product.productName">
     <h3 class="product-title">{{ product.productName }}</h3>
     <p class="product-price">${{ product.price }}</p>

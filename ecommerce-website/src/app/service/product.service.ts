@@ -85,6 +85,14 @@ export class ProductService {
         productImgUrl: "https://d1flfk77wl2xk4.cloudfront.net/Assets/74/804/XXL_p0134680474.jpg",
         productDesc: "Get your wardrobe winter-ready with this chunky knit cardi, which comes with contrast trim along the front and the hem for subtle varsity vibes.",
         price: 13.52
+      },
+      {
+        productName: "Dute - Contrast Trim Cardigan",
+        productId: 11,
+        productCategory: "Plushies",
+        productImgUrl: "https://d1flfk77wl2xk4.cloudfront.net/Assets/74/804/XXL_p0134680474.jpg",
+        productDesc: "Get your wardrobe winter-ready with this chunky knit cardi, which comes with contrast trim along the front and the hem for subtle varsity vibes.",
+        price: 13.52
       }
   ];
 
