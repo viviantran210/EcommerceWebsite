@@ -87,13 +87,21 @@ export class ProductService {
         price: 13.52
       },
       {
-        productName: "Dute - Contrast Trim Cardigan",
+        productName: "Pokemon Rowlet Sleeping Kids\' Plush Buddy",
         productId: 11,
         productCategory: "Plushies",
-        productImgUrl: "https://d1flfk77wl2xk4.cloudfront.net/Assets/74/804/XXL_p0134680474.jpg",
-        productDesc: "Get your wardrobe winter-ready with this chunky knit cardi, which comes with contrast trim along the front and the hem for subtle varsity vibes.",
-        price: 13.52
-      }
+        productImgUrl: "https://target.scene7.com/is/image/Target/GUEST_b0d4fe00-35a4-467a-b192-901b6a26603a?wid=1200&hei=1200&qlt=80&fmt=webp",
+        productDesc: "Choose to snooze with Rowlet, the Grass Quill Pokémon. This supersized plush rounds out at 18-inches and is splayed in a unique sleeping posture.",
+        price: 25.49
+      },
+      {
+        productName: "UT ARCHIVE Jujutsu Kaisen UT Graphic T-Shirt",
+        productId: 12,
+        productCategory: "Clothes",
+        productImgUrl: "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/476658/sub/goods_476658_sub14_3x4.jpg?width=400",
+        productDesc: "Jujutsu Kaisen is re-released from the anime UT collection that have been released in the past and have been a big hit.",
+        price: 24.90
+      },
   ];
 
   getProductById(id: number): Observable<any> {
