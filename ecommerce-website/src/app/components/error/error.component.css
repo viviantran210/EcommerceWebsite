@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.text-column {
+  flex: 1;
+  max-width: 50%;
+  padding: 1rem;
+}
+
+.animated-column {
+  flex: 1;
+  max-width: 50%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  visibility: hidden;
+}
+
+button {
+  font-family:"Nunito Sans";
+}
+
+h1 {
+  font-size: 7.5em;
+  margin: 0.938rem 0rem;
+  font-weight:bold;
+}
+
+h2 {
+  font-weight:bold;
+}
+
+.btn {
+  z-index: 1;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+  padding: 0.5rem 3.125rem;
+  border-radius: 1.875rem;
+  cursor: pointer;
+  font-size: 1em;
+  letter-spacing: 0.125rem;
+  transition: 0.2s ease;
+  font-weight: bold;
+  margin: 0.313rem 0rem;
+  border: 0.25rem solid #2ccf6d;
+  color: #0e0620;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background: #2ccf6d;
+  z-index: -1;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  color: white;
+  background: #2ccf6d;
+  transition: 0.2s ease;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+@media screen and (max-width:48rem) {
+  .row {
+    flex-direction: column;
+  }
+
+  .animated-column, .text-column {
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+}
