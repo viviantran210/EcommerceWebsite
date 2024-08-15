@@ -22,7 +22,6 @@ export class ProductComponent implements OnInit {
   }
 
   public navigateToProduct(product: any) {
-    console.log('Navigating to product:', product.productName);
     this.router.navigate([ this.categoryName.toLowerCase(), product.productId]);
   }
 }
