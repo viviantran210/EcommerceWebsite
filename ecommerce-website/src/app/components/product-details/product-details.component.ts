@@ -4,11 +4,15 @@ import { CommonModule } from '@angular/common';
 import { ProductService } from '../../service/product.service';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { MatCardModule } from'@angular/material/card';
 
 @Component({
   selector: 'app-product-details',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    MatCardModule
+  ],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
 })

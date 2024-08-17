@@ -1,0 +1,42 @@
+.product-card {
+  max-width: 50rem;
+  height: 50%;
+  margin: 1.25rem auto;
+  background-color: white;
+}
+
+.product-container {
+  display: flex;
+  align-items: center;
+}
+
+.product-image {
+  max-height: 30rem;
+  width: auto;
+  margin-left: 0rem;
+}
+
+.product-info {
+  flex: 1;
+}
+
+mat-card-header {
+  margin-bottom: 1rem;
+}
+
+mat-card-content {
+  margin: 0rem;
+}
+
+mat-card-actions {
+  margin-top: 1.25rem;
+}
+
+button[mat-raised-button] {
+  background-color: var(--blue);
+  color: white;
+  border-radius: 0.2rem;
+  border: 0.1rem solid black;
+  padding: 0.5rem;
+  margin-left: 0.3rem;
+}
