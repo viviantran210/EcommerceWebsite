@@ -119,18 +119,20 @@
 }
 
 .fa-shopping-cart {
-  font-size: 2rem; 
-  padding: 0.5rem; 
-  border-radius: 50%; 
-  background-color: #f1f1f1d9; 
+  font-size: 2rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #f1f1f1d9;
 }
 
 /* Hover effect */
 .fa-shopping-cart:hover {
   color: white;
-  background-color: black; 
+  background-color: black;
+  transition: 0.2s ease;
 }
 
 h1 {
   margin: 0 1rem;
+  font-size: 2rem;
 }
