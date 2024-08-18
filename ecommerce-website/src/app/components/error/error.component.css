@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
-
-
 .row {
   display: flex;
   justify-content: space-between;
@@ -28,10 +25,6 @@ svg {
   width: 100%;
   height: auto;
   visibility: hidden;
-}
-
-button {
-  font-family:"Nunito Sans";
 }
 
 h1 {
