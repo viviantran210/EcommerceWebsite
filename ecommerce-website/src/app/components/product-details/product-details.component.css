@@ -1,0 +1,49 @@
+.product-card {
+  max-width: 70rem;
+  height: 40rem;
+  margin: 1.25rem auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.product-image {
+  width: 35rem;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+mat-card-header {
+  margin-bottom: 1rem;
+}
+
+mat-card-content {
+  flex-grow: 1;
+}
+
+mat-card-actions {
+  margin-top: 1.25rem;
+}
+
+button[mat-raised-button] {
+  background-color: var(--blue);
+  color: white;
+  border-radius: 0.2rem;
+  border: 0.1rem solid black;
+  padding: 0.5rem;
+  margin-left: 0.3rem;
+}

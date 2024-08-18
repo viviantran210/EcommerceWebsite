@@ -1,14 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ProductService } from '../../service/product.service';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { MatCardModule } from'@angular/material/card';
 
 @Component({
   selector: 'app-product-details',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    RouterModule,
+    CommonModule,
+    MatCardModule
+  ],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
 })
