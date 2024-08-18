@@ -2,6 +2,11 @@
   <div class="product-container">
     <img mat-card-image [src]="product.productImgUrl" [alt]="product.productName" class="product-image">
     <div class="product-info">
+      <mat-card-content>
+        <a [routerLink]="['/', product.productCategory | lowercase]">
+          <u>Shop for {{ product.productCategory }}</u>
+        </a>
+    </mat-card-content>
       <mat-card-header>
         <mat-card-title>{{ product.productName }}</mat-card-title>
       </mat-card-header>

@@ -26,7 +26,7 @@ export class ProductService {
       productName: "Jujutsu Kaisen Dai 2 Ki - Gojou Satoru - Figurizm Alpha - Muryoukuusho (SEGA)",
       productId: 3,
       productCategory: "Figures",
-      productImgUrl: "https://solarisjapan.com/cdn/shop/files/f86a7b34-e2a1-11ee-b7c4-0242ac120004_360x.jpg?v=1710489585",
+      productImgUrl: "https://solarisjapan.com/cdn/shop/files/f463c842-e2a1-11ee-b8e2-0242ac120004_540x.jpg?v=1710489585",
       productDesc: "Gojo Satoru joins Sega’s Figurizm Alpha collection of figures in this Muryoukuusho Ver. Prize figure.",
       price: 52.32
     },
@@ -34,7 +34,7 @@ export class ProductService {
       productName: "Jujutsu Kaisen - Fantasy Studio - Kento Nanami",
       productId: 4,
       productCategory: "Figures",
-      productImgUrl: "https://www.kaioland.com/wp-content/uploads/2023/12/Jujutsu-Kaisen-Fantasy-Studio-Kento-Nanami-Resin-Statue-1-600x338.png",
+      productImgUrl: "https://i0.wp.com/dreamofanimes.com/wp-content/uploads/2023/12/Image_20231211083450.jpg?resize=2048%2C1152&ssl=1",
       productDesc: "Gojo Satoru joins Sega’s Figurizm Alpha collection of figures in this Muryoukuusho Ver. Prize figure.",
       price: 220.00
     },
@@ -50,7 +50,7 @@ export class ProductService {
         productName: "Pokemon Center Lucario Poké Plush - 47 ¼ In.",
         productId: 6,
         productCategory: "Plushies",
-        productImgUrl: "https://www.pokemoncenter.com/images/DAMRoot/High/10000/P8133_701-94581_07.jpg",
+        productImgUrl: "https://www.pokemoncenter.com/images/DAMRoot/High/10000/P8133_701-94581_06.jpg",
         productDesc: "This jumbo Lucario plush is the same height listed in the Pokédex, and from its pointy ears to its cute little paw pads, this plush is big on both attention to detail and personality.",
         price: 10.99
       },

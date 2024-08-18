@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ProductService } from '../../service/product.service';
 import { Observable } from 'rxjs';
@@ -10,6 +10,7 @@ import { MatCardModule } from'@angular/material/card';
   selector: 'app-product-details',
   standalone: true,
   imports: [
+    RouterModule,
     CommonModule,
     MatCardModule
   ],
