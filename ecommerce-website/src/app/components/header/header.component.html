@@ -2,16 +2,14 @@
   <div class="nav">
       <div class="nav-links">
         <a routerLink="/" >Home</a>
-        <div class="dropdown">
-          <button class="dropbtn">Categories
-            <i class="fa fa-caret-down"></i>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item *ngFor="let category of categories" (click)="navigateToCategory(category)">
+            {{ category }}
           </button>
-          <div class="dropdown-content">
-            <a routerLink="/figures" >Figures</a>
-            <a routerLink="/plushies" >Plushies</a>
-            <a routerLink="/clothes" >Clothes</a>
-          </div>
-        </div>
+        </mat-menu>
+        <button mat-button [matMenuTriggerFor]="menu" aria-label="Categories dropdown selection menu">
+          Categories <i class="fa fa-caret-down"></i>
+        </button>
         <a routerLink="/about" >About</a>
         <a routerLink="/contact" >Contact</a>
       </div>
