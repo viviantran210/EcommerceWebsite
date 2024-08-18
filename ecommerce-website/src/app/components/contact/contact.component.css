@@ -1,11 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
-
 h1 {
   text-align: center;
-}
-
-.contact_us * {
-  font-family: Nunito, sans-serif;
 }
 
 .contact_us .text-blk {
@@ -52,18 +46,6 @@ h1 {
   padding-left: 0px;
 }
 
-.contact_us .responsive-container-block.big-container {
-  padding-top: 10px;
-  padding-right: 30px;
-  width: 35%;
-  padding-bottom: 10px;
-  padding-left: 30px;
-  background-color: #03a9f4;
-  position: absolute;
-  height: 950px;
-  right: 0px;
-}
-
 .contact_us .responsive-container-block.container {
   position: relative;
   min-height: 75px;
@@ -106,24 +88,6 @@ h1 {
   font-size: 28px;
   line-height: 52px;
   font-weight: 800;
-}
-
-.contact_us .text-blk.contactus-subhead {
-  color: #9c9c9c;
-  width: 300px;
-  margin-top: 0px;
-  margin-right: auto;
-  margin-bottom: 50px;
-  margin-left: auto;
-  display: none;
-}
-
-.contact_us .responsive-cell-block.wk-desk-6.wk-ipadp-6.wk-tab-12.wk-mobile-12 {
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 26px;
-  margin-left: 0px;
-  min-height: 50px;
 }
 
 .contact_us .input {
@@ -233,10 +197,6 @@ h1 {
   color: #9c9c9c;
 }
 
-.contact_us ::placeholder {
-  color: #dadada;
-}
-
 .contact_us .mob-text {
   display: block;
   text-align: left;
@@ -251,10 +211,6 @@ h1 {
   margin-right: 0px;
   margin-bottom: 20px;
   margin-left: 0px;
-}
-
-.contact_us .text-blk.contactus-subhead.color {
-  color: white;
 }
 
 .contact_us .map-box {
@@ -283,14 +239,6 @@ h1 {
   margin-bottom: 10px;
   margin-left: 0px;
   color: #03a9f4;
-}
-
-.contact_us .text-blk.map-contactus-subhead {
-  max-width: 300px;
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 20px;
-  margin-left: 0px;
 }
 
 .contact_us .social-media-links.mob {
@@ -391,10 +339,6 @@ h1 {
     justify-content: flex-end;
     align-items: center;
     flex-direction: row;
-  }
-
-  .contact_us .text-blk.contactus-subhead {
-    display: block;
   }
 
   .contact_us .mob-text {
@@ -518,13 +462,6 @@ h1 {
     margin-left: 0px;
   }
 
-  .contact_us .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 15px;
-    margin-left: 0px;
-  }
-
   .contact_us .responsive-container-block {
     margin-top: 0px;
     margin-right: 0px;
@@ -558,48 +495,8 @@ body {
   margin: 0;
 }
 
-.wk-desk-1 {
-  width: 8.333333%;
-}
-
-.wk-desk-2 {
-  width: 16.666667%;
-}
-
-.wk-desk-3 {
-  width: 25%;
-}
-
-.wk-desk-4 {
-  width: 33.333333%;
-}
-
-.wk-desk-5 {
-  width: 41.666667%;
-}
-
-.wk-desk-6 {
-  width: 50%;
-}
-
 .wk-desk-7 {
   width: 58.333333%;
-}
-
-.wk-desk-8 {
-  width: 66.666667%;
-}
-
-.wk-desk-9 {
-  width: 75%;
-}
-
-.wk-desk-10 {
-  width: 83.333333%;
-}
-
-.wk-desk-11 {
-  width: 91.666667%;
 }
 
 .wk-desk-12 {
@@ -607,49 +504,6 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .wk-ipadp-1 {
-    width: 8.333333%;
-  }
-
-  .wk-ipadp-2 {
-    width: 16.666667%;
-  }
-
-  .wk-ipadp-3 {
-    width: 25%;
-  }
-
-  .wk-ipadp-4 {
-    width: 33.333333%;
-  }
-
-  .wk-ipadp-5 {
-    width: 41.666667%;
-  }
-
-  .wk-ipadp-6 {
-    width: 50%;
-  }
-
-  .wk-ipadp-7 {
-    width: 58.333333%;
-  }
-
-  .wk-ipadp-8 {
-    width: 66.666667%;
-  }
-
-  .wk-ipadp-9 {
-    width: 75%;
-  }
-
-  .wk-ipadp-10 {
-    width: 83.333333%;
-  }
-
-  .wk-ipadp-11 {
-    width: 91.666667%;
-  }
 
   .wk-ipadp-12 {
     width: 100%;
@@ -657,49 +511,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .wk-tab-1 {
-    width: 8.333333%;
-  }
-
-  .wk-tab-2 {
-    width: 16.666667%;
-  }
-
-  .wk-tab-3 {
-    width: 25%;
-  }
-
-  .wk-tab-4 {
-    width: 33.333333%;
-  }
-
-  .wk-tab-5 {
-    width: 41.666667%;
-  }
-
-  .wk-tab-6 {
-    width: 50%;
-  }
-
-  .wk-tab-7 {
-    width: 58.333333%;
-  }
-
-  .wk-tab-8 {
-    width: 66.666667%;
-  }
-
-  .wk-tab-9 {
-    width: 75%;
-  }
-
-  .wk-tab-10 {
-    width: 83.333333%;
-  }
-
-  .wk-tab-11 {
-    width: 91.666667%;
-  }
 
   .wk-tab-12 {
     width: 100%;
@@ -707,49 +518,6 @@ body {
 }
 
 @media (max-width: 500px) {
-  .wk-mobile-1 {
-    width: 8.333333%;
-  }
-
-  .wk-mobile-2 {
-    width: 16.666667%;
-  }
-
-  .wk-mobile-3 {
-    width: 25%;
-  }
-
-  .wk-mobile-4 {
-    width: 33.333333%;
-  }
-
-  .wk-mobile-5 {
-    width: 41.666667%;
-  }
-
-  .wk-mobile-6 {
-    width: 50%;
-  }
-
-  .wk-mobile-7 {
-    width: 58.333333%;
-  }
-
-  .wk-mobile-8 {
-    width: 66.666667%;
-  }
-
-  .wk-mobile-9 {
-    width: 75%;
-  }
-
-  .wk-mobile-10 {
-    width: 83.333333%;
-  }
-
-  .wk-mobile-11 {
-    width: 91.666667%;
-  }
 
   .wk-mobile-12 {
     width: 100%;
