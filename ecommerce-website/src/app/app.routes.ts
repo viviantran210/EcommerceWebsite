@@ -11,36 +11,37 @@ import { ErrorComponent } from './components/error/error.component';
 export const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent
+    loadComponent: () => import('./components/home/home.component').then(m => m.HomeComponent)
   },
   {
     path: 'about',
-    component: AboutComponent
+    loadComponent: () => import('./components/about/about.component').then(m => m.AboutComponent)
   },
   {
     path: 'contact',
-    component: ContactComponent,
+    loadComponent: () => import('./components/contact/contact.component').then(m => m.ContactComponent)
   },
   {
     path: 'figures',
-    component: FiguresComponent,
+    loadComponent: () => import('./components/categories/figures/figures.component').then(m => m.FiguresComponent)
   },
   {
     path: 'plushies',
-    component: PlushiesComponent
+    loadComponent: () => import('./components/categories/plushies/plushies.component').then(m => m.PlushiesComponent)
   },
   {
     path: 'clothes',
-    component: ClothesComponent
+    loadComponent: () => import('./components/categories/clothes/clothes.component').then(m => m.ClothesComponent)
   },
   {
     path: ':category/:id',
-    component: ProductDetailsComponent,
+    loadComponent: () => import('./components/product-details/product-details.component').then(m => m.ProductDetailsComponent)
   },
   {
     path: '', redirectTo: '/home', pathMatch: 'full'
   },
-  { path: '**', pathMatch: 'full',
-    component: ErrorComponent
+  {
+    path: '**',
+    loadComponent: () => import('./components/error/error.component').then(m => m.ErrorComponent)
   }
 ];
