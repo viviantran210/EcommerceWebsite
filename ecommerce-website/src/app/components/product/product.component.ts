@@ -21,7 +21,7 @@ export class ProductComponent implements OnInit {
     this.productList$ = this.productService.getProductsByCategory(this.categoryName);
   }
 
-  public navigateToProduct(product: any) {
-    this.router.navigate([ this.categoryName.toLowerCase(), product.productId]);
+  public navigateToProduct(productId: number) {
+    this.router.navigate([ this.categoryName.toLowerCase(), productId]);
   }
 }
