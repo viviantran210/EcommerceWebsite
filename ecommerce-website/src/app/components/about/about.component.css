@@ -1,23 +1,17 @@
-.container {
-  width: 90%;
-  margin: 0 auto;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 5rem;
 }
 
-.text-column {
-  display: flex;
-  max-width: 30rem;
-  text-align: left;
-}
-
-.image-column {
-  display: flex;
-  justify-content: center;
+.column {
+  flex: 1;
+  padding: 0rem;
 }
 
 img {
@@ -31,7 +25,7 @@ h1 {
 }
 
 p {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1.8;
   color: gray;
 }
