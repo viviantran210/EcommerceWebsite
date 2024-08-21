@@ -1,18 +1,18 @@
 <header>
   <div class="nav">
-      <div class="nav-links">
-        <a routerLink="/" >Home</a>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item *ngFor="let category of categories" (click)="navigateToCategory(category)">
-            {{ category }}
-          </button>
-        </mat-menu>
-        <button mat-button [matMenuTriggerFor]="menu" aria-label="Categories dropdown selection menu">
-          Categories <i class="fa fa-caret-down"></i>
+    <div class="nav-links">
+      <button mat-button routerLink="/">Home</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngFor="let category of categories" (click)="navigateToCategory(category)">
+          {{ category }}
         </button>
-        <a routerLink="/about" >About</a>
-        <a routerLink="/contact" >Contact</a>
-      </div>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="menu" aria-label="Categories dropdown selection menu">
+        Categories <i class="fa fa-caret-down"></i>
+      </button>
+      <button mat-button routerLink="/about">About</button>
+      <button mat-button routerLink="/contact">Contact</button>
+    </div>
       <div class="search-container">
         <form action="#">
           <input type="text" placeholder="Search.." name="search" [(ngModel)]="searchQuery" />
@@ -22,7 +22,7 @@
           </button>
         </form>
       </div>
-      <i class="fa fa-shopping-cart" style="font-size: 1.5rem"></i>
+      <i class="fa fa-shopping-cart" style="font-size: 2.5rem"></i>
   </div>
   <h1>Searching: {{ searchQuery }}</h1>
 </header>
