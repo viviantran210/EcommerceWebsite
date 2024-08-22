@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, CurrencyPipe } from '@angular/common';
 import { Router, RouterLink, RouterModule } from '@angular/router';
 import { ProductService } from '../../service/product.service';
 import { Observable } from 'rxjs';
@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterModule],
+  imports: [CommonModule, RouterLink, RouterModule, CurrencyPipe],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
