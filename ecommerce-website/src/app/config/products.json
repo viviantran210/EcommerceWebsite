@@ -1,0 +1,100 @@
+{
+  "products": [
+    {
+      "productName": "Jujutsu Kaisen - Nobara Kugisaki 1/7 Scale Figure",
+      "productId": 1,
+      "productCategory": "Figures",
+      "productImgUrl": "https://imgs2.goodsmileus.com/image/cache/data/productimages/ScaleFigures/JUJUTSUKAISENFigure_NobaraKugisaki/01_231128102438542-1200x1200.jpg",
+      "productDesc": "1/7 scale figure of Nobara Kugisaki from the Origin of Blind Obedience arc of JUJUTSU KAISEN season 1",
+      "price": 165.99
+    },
+    {
+      "productName": "Jujutsu Kaisen Inumaki Toge Shibuya Scramble Figure",
+      "productId": 2,
+      "productCategory": "Figures",
+      "productImgUrl": "https://i5.walmartimages.com/asr/dadfd7a8-9bf1-4218-92cd-024b937b5906.1dba91acb5559d5ec5d30889b00c39fd.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF",
+      "productDesc": "Jujutsu Kaisen Inumaki Toge Shibuya Scramble 1:7 Statue",
+      "price": 303.97
+    },
+    {
+      "productName": "Jujutsu Kaisen Dai 2 Ki - Gojou Satoru - Figurizm Alpha - Muryoukuusho (SEGA)",
+      "productId": 3,
+      "productCategory": "Figures",
+      "productImgUrl": "https://solarisjapan.com/cdn/shop/files/f463c842-e2a1-11ee-b8e2-0242ac120004_540x.jpg?v=1710489585",
+      " ": "Gojo Satoru joins Sega’s Figurizm Alpha collection of figures in this Muryoukuusho Ver. Prize figure.",
+      "price": 52.32
+    },
+    {
+      "productName": "Jujutsu Kaisen - Fantasy Studio - Kento Nanami",
+      "productId": 4,
+      "productCategory": "Figures",
+      "productImgUrl": "https://i0.wp.com/dreamofanimes.com/wp-content/uploads/2023/12/Image_20231211083450.jpg?resize=2048%2C1152&ssl=1",
+      "productDesc": "Gojo Satoru joins Sega’s Figurizm Alpha collection of figures in this Muryoukuusho Ver. Prize figure.",
+      "price": 220.00
+    },
+    {
+        "productName": "Ichiban Kuji Pokemon Peaceful Place Pokepeace Piplup",
+        "productId": 5,
+        "productCategory": "Plushies",
+        "productImgUrl": "https://i.ebayimg.com/images/g/yVMAAOSwJ9xmBIGk/s-l1600.webp",
+        "productDesc": "This charming Japanese-exclusive plush features Piplup in a serene, peaceful design, perfect for Pokémon fans and collectors.",
+        "price": 95.00
+      },
+      {
+       "productName": "Pokemon Center Lucario Poké Plush - 47 ¼ In.",
+        "productId": 6,
+        "productCategory": "Plushies",
+        "productImgUrl": "https://www.pokemoncenter.com/images/DAMRoot/High/10000/P8133_701-94581_06.jpg",
+       " productDesc": "This jumbo Lucario plush is the same height listed in the Pokédex, and from its pointy ears to its cute little paw pads, this plush is big on both attention to detail and personality.",
+        "price": 10.99
+      },
+      {
+       "productName": "Pokemon Center 2019 Plush Toy Transform Ditto Mimikyu",
+        "productId": 7,
+        "productCategory": "Plushies",
+        "productImgUrl": "https://i.ebayimg.com/images/g/ZUcAAOSwtSZkbDev/s-l1600.webp",
+        "productDesc": "Mimikyu is looking for friends, and this plush version fits neatly on any shelf, desk, or couch.",
+        "price": 10.99
+      },
+      {
+        "productName": "Rosesand - Unisex Short Sleeve Cat & Lettering Print Loose-Fit Tee",
+        "productId": 8,
+        "productCategory": "Clothes",
+        "productImgUrl": "https://d1flfk77wl2xk4.cloudfront.net/Assets/04/695/XXL_p0196969504.jpg",
+        "productDesc": "This loose-fit T-shirt features a charming cat print plus Japanese characters and English lettering. Choose between almond and white color.",
+        "price": 7.35
+      },
+      {
+        "productName": "GAI Women's Oversized Vintage Baseball Jacket",
+        "productId": 9,
+       "productCategory": "Clothes",
+        "productImgUrl": "https://m.media-amazon.com/images/I/61D1w0Nh87L._AC_SX569_.jpg",
+        "productDesc": "This jumbo Lucario plush is the same height listed in the Pokédex, and from its pointy ears to its cute little paw pads, this plush is big on both attention to detail and personality.",
+        "price": 27.00
+      },
+      {
+        "productName": "Dute - Contrast Trim Cardigan",
+        "productId": 10,
+        "productCategory": "Clothes",
+        "productImgUrl": "https://d1flfk77wl2xk4.cloudfront.net/Assets/74/804/XXL_p0134680474.jpg",
+        "productDesc": "Get your wardrobe winter-ready with this chunky knit cardi, which comes with contrast trim along the front and the hem for subtle varsity vibes.",
+        "price": 13.52
+      },
+      {
+        "productName": "Pokemon Rowlet Sleeping Kids Plush Buddy",
+        "productId": 11,
+        "productCategory": "Plushies",
+        "productImgUrl": "https://target.scene7.com/is/image/Target/GUEST_b0d4fe00-35a4-467a-b192-901b6a26603a?wid=1200&hei=1200&qlt=80&fmt=webp",
+        "productDesc": "Choose to snooze with Rowlet, the Grass Quill Pokémon. This supersized plush rounds out at 18-inches and is splayed in a unique sleeping posture.",
+        "price": 25.49
+      },
+      {
+        "productName": "UT ARCHIVE Jujutsu Kaisen UT Graphic T-Shirt",
+        "productId": 12,
+        "productCategory": "Clothes",
+        "productImgUrl": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/476658/sub/goods_476658_sub14_3x4.jpg?width=400",
+        "productDesc": "Jujutsu Kaisen is re-released from the anime UT collection that have been released in the past and have been a big hit.",
+        "price": 24.90
+      }
+  ]
+}
