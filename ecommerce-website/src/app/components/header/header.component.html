@@ -3,8 +3,8 @@
     <div class="nav-links">
       <button mat-button routerLink="/">Home</button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item *ngFor="let category of categories" (click)="navigateToCategory(category)">
-          {{ category }}
+        <button mat-menu-item *ngFor="let category of categories" (click)="navigateToCategory(category.categoryName)">
+          {{ category.categoryName }}
         </button>
       </mat-menu>
       <button mat-button [matMenuTriggerFor]="menu" aria-label="Categories dropdown selection menu">

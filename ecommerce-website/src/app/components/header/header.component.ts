@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
@@ -21,11 +21,11 @@ import { MatButtonModule } from '@angular/material/button';
 export class HeaderComponent {
   searchQuery: string = '';
 
-  categories = ["Figures", "Plushies", "Clothes"]
+  @Input() categories: any[] = []
 
   constructor(private router: Router) {}
 
-  public navigateToCategory(category: string) {
-    this.router.navigate([category.toLowerCase()]);
+  public navigateToCategory(categoryName: string) {
+    this.router.navigate([categoryName.toLowerCase()]);
   }
 }
