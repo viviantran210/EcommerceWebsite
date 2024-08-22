@@ -5,7 +5,7 @@
   --blue: #39adff;
 }
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
 
 @media (max-width: 37.5rem) {
   h1 {
