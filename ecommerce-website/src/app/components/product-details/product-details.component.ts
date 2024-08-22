@@ -32,7 +32,6 @@ export class ProductDetailsComponent implements OnInit {
       switchMap(params => {
         const productId = +params['id'];
         const categoryName = params['category'];
-        
         return this.productService.getProductsByCategoryAndId(categoryName, productId).pipe(
           catchError(err => {
             // Navigate to the error page if the product is not found

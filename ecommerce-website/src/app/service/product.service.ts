@@ -24,7 +24,7 @@ export class ProductService {
 
   getProductsByCategoryAndId(category: string, id: number): Observable<any> {
     const products = this.productList.filter(p => p.productCategory.toLowerCase() === category.toLowerCase());
-    const product = this.getProductById(id);
+    const product = products.find(p => p.productId === id);
 
     if (product) {
       return of(product);
