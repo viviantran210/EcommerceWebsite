@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { ProductService } from '../../service/product.service';
-import { Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { switchMap, catchError } from 'rxjs/operators';
 import { MatCardModule } from'@angular/material/card';
 
 @Component({
@@ -32,14 +32,13 @@ export class ProductDetailsComponent implements OnInit {
       switchMap(params => {
         const productId = +params['id'];
         const categoryName = params['category'];
-        return this.productService.getProductById(productId).pipe(
-          switchMap(product => {
-            // Check if the product exists and if it belongs to the correct category
-            if (!product || product.productCategory.toLowerCase() !== categoryName.toLowerCase()) {
-              this.router.navigate(['/error']);
-              return [];
-            }
-            return [product];
+        
+        return this.productService.getProductsByCategoryAndId(categoryName, productId).pipe(
+          catchError(err => {
+            // Navigate to the error page if the product is not found
+            this.router.navigate(['/error']);
+            // Return an empty observable
+            return of(null);
           })
         );
       })

@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule, CurrencyPipe } from '@angular/common';
-import { Router, RouterLink, RouterModule } from '@angular/router';
+import { Router, RouterLink, RouterModule, ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../service/product.service';
-import { Observable } from 'rxjs';
+import productsFile from '../../config/products.json';
 
 @Component({
   selector: 'app-product',
@@ -13,12 +13,20 @@ import { Observable } from 'rxjs';
 })
 export class ProductComponent implements OnInit {
   @Input() categoryName!: string;
-  productList$!:  Observable<any[]>;
+  productList: any[] = [];
 
-  constructor(private productService: ProductService, private router: Router) {}
+  constructor(
+    private productService: ProductService,
+    private router: Router,
+    private readonly route: ActivatedRoute) {}
 
-  ngOnInit() {
-    this.productList$ = this.productService.getProductsByCategory(this.categoryName);
+  ngOnInit(): void {
+    this.route.url.subscribe({
+      next: (url) => {
+        this.productList = productsFile.products.filter((items: any) => url[0].path === items.productCategory.toLowerCase());
+        this.productService.setProductList(this.productList);
+      }
+    })
   }
 
   public navigateToProduct(productId: number) {
