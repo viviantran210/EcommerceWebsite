@@ -2,7 +2,6 @@ import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { Router, RouterLink, RouterModule, ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../service/product.service';
-import productsFile from '../../config/products.json';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -25,8 +24,7 @@ export class ProductComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.routeSubscription = this.route.url.subscribe({
       next: (url) => {
-        this.productList = productsFile.products.filter((items: any) => url[0].path === items.productCategory.toLowerCase());
-        this.productService.setProductList(this.productList);
+        this.productList = this.productService.getProductsByCategory(url[0].path);
       }
     })
   }
