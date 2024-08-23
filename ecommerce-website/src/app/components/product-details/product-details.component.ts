@@ -20,6 +20,7 @@ import { MatCardModule } from'@angular/material/card';
 })
 export class ProductDetailsComponent implements OnInit {
   product$!: Observable<any>;
+  quantity: number = 1;
 
   constructor(
     private route: ActivatedRoute,
@@ -42,5 +43,17 @@ export class ProductDetailsComponent implements OnInit {
         );
       })
     );
+  }
+
+  incrementQuantity(maxQty: number): void {
+    if (this.quantity < maxQty) {
+      this.quantity++;
+    }
+  }
+
+  decrementQuantity(): void {
+    if (this.quantity > 1) {
+      this.quantity--;
+    }
   }
 }
