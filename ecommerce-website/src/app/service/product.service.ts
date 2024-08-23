@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
-import productsFile from '../config/products.json';
+import productsFile from '../config/product-details.json';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class ProductService {
   constructor() {}
 
   setProductList() {
-    this.productList = productsFile.products;
+    this.productList = productsFile.productDetails;
   }
 
   getProductsByCategory(categoryName: string) {
