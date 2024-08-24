@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule, CurrencyPipe } from '@angular/common';
-import { ProductService } from '../../service/product.service';
+import { ProductService } from '../../service/product/product.service';
+import { CartService } from '../../service/cart/cart.service';
 import { Observable, of } from 'rxjs';
 import { switchMap, catchError } from 'rxjs/operators';
 import { MatCardModule } from'@angular/material/card';
@@ -25,7 +26,8 @@ export class ProductDetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private productService: ProductService
+    private productService: ProductService,
+    private cartService: CartService
   ) {}
 
   ngOnInit() {
@@ -55,5 +57,16 @@ export class ProductDetailsComponent implements OnInit {
     if (this.quantity > 1) {
       this.quantity--;
     }
+  }
+
+  addToCart(product: any) {
+    const cartItem = {
+      id: product.productId,
+      name: product.productName,
+      price: product.price,
+      quantity: this.quantity,
+      imageUrl: product.productImgUrl
+    };
+    this.cartService.addToCart(cartItem);
   }
 }
