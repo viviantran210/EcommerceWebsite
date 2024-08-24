@@ -22,7 +22,12 @@
           </button>
         </form>
       </div>
-      <i class="fa fa-shopping-cart" style="font-size: 2.5rem"></i>
+      <div class="cart-icon">
+        <a [routerLink]="['/cart']">
+          <i class="fa fa-shopping-cart"></i>
+          <span *ngIf="cartItemCount > 0" class="cart-count">{{ cartItemCount }}</span>
+        </a>
+      </div>
   </div>
   <!--<h1>Searching: {{ searchQuery }}</h1>-->
 </header>
