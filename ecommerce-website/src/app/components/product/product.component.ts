@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { Router, RouterLink, RouterModule, ActivatedRoute } from '@angular/router';
-import { ProductService } from '../../service/product.service';
+import { ProductService } from '../../service/product/product.service';
 import { Subscription } from 'rxjs';
 
 @Component({
