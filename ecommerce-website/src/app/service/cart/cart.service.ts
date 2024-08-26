@@ -5,7 +5,8 @@ interface CartItem {
   id: number;
   name: string;
   price: number;
-  quantity: number;
+  quantityInCart: number;
+  quantityAvailable: number;
   imageUrl: string;
 }
 
@@ -21,7 +22,7 @@ export class CartService {
     const existingItem = currentItems.find(cartItem => cartItem.id === item.id);
 
     if (existingItem) {
-      existingItem.quantity += item.quantity;
+      existingItem.quantityInCart += item.quantityInCart;
     } else {
       currentItems.push(item);
     }
@@ -36,8 +37,8 @@ export class CartService {
     if (itemIndex > -1) {
       const existingItem = currentItems[itemIndex];
 
-      if (existingItem.quantity > quantity) {
-        existingItem.quantity -= quantity;
+      if (existingItem.quantityInCart > quantity) {
+        existingItem.quantityInCart -= quantity;
       } else {
         currentItems = currentItems.filter(cartItem => cartItem.id !== itemId);
       }
@@ -47,11 +48,11 @@ export class CartService {
   }
 
   getCartItemCount(): number {
-    return this.cartItemsSubject.getValue().reduce((total, item) => total + item.quantity, 0);
+    return this.cartItemsSubject.getValue().reduce((total, item) => total + item.quantityInCart, 0);
   }
 
   getCartTotalPrice(): number {
-    return this.cartItemsSubject.getValue().reduce((total, item) => total + item.price * item.quantity, 0);
+    return this.cartItemsSubject.getValue().reduce((total, item) => total + item.price * item.quantityInCart, 0);
   }
 
   getCartItems() {

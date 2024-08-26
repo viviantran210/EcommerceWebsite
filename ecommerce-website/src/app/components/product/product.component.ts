@@ -3,11 +3,18 @@ import { CommonModule, CurrencyPipe } from '@angular/common';
 import { Router, RouterLink, RouterModule, ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../service/product/product.service';
 import { Subscription } from 'rxjs';
+import { AddToCartButtonComponent } from './../../shared-components/add-to-cart-button/add-to-cart-button.component';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterModule, CurrencyPipe],
+  imports: [
+    CommonModule,
+    RouterLink,
+    RouterModule,
+    CurrencyPipe,
+    AddToCartButtonComponent
+  ],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })

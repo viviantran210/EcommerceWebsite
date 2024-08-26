@@ -20,7 +20,7 @@
           <input class="product-qty" type="number" [value]="quantity" readonly>
           <button class="qty-count qty-count--add" type="button" (click)="incrementQuantity(product.productQty)">+</button>
         </div>
-        <button mat-raised-button (click)="addToCart(product)"><b>Add to Cart</b></button>
+        <app-add-to-cart-button [product]="product" [quantity]="quantity"></app-add-to-cart-button>
       </mat-card-actions>
     </div>
   </div>

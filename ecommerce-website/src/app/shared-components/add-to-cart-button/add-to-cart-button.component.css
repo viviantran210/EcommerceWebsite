@@ -1,0 +1,10 @@
+button[mat-raised-button] {
+  background-color: var(--blue);
+  width: 10rem;
+  height: 3rem;
+  color: white;
+  border-radius: 1.5rem;
+  border: none;
+  padding: 0.5rem;
+  margin-left: 0.3rem;
+}

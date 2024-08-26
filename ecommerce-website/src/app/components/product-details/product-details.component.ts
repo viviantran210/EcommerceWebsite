@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { ProductService } from '../../service/product/product.service';
-import { CartService } from '../../service/cart/cart.service';
 import { Observable, of } from 'rxjs';
 import { switchMap, catchError } from 'rxjs/operators';
 import { MatCardModule } from'@angular/material/card';
+import { AddToCartButtonComponent } from './../../shared-components/add-to-cart-button/add-to-cart-button.component';
 
 @Component({
   selector: 'app-product-details',
@@ -14,7 +14,8 @@ import { MatCardModule } from'@angular/material/card';
     RouterModule,
     CommonModule,
     MatCardModule,
-    CurrencyPipe
+    CurrencyPipe,
+    AddToCartButtonComponent
   ],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
@@ -27,7 +28,6 @@ export class ProductDetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private productService: ProductService,
-    private cartService: CartService
   ) {}
 
   ngOnInit() {
@@ -59,14 +59,4 @@ export class ProductDetailsComponent implements OnInit {
     }
   }
 
-  addToCart(product: any) {
-    const cartItem = {
-      id: product.productId,
-      name: product.productName,
-      price: product.price,
-      quantity: this.quantity,
-      imageUrl: product.productImgUrl
-    };
-    this.cartService.addToCart(cartItem);
-  }
 }
