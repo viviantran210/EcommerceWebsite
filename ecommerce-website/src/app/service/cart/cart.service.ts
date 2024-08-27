@@ -5,6 +5,7 @@ interface CartItem {
   id: number;
   name: string;
   price: number;
+  description: string;
   quantityInCart: number;
   quantityAvailable: number;
   imageUrl: string;
@@ -16,6 +17,10 @@ interface CartItem {
 export class CartService {
   private cartItemsSubject = new BehaviorSubject<CartItem[]>([]);
   cartItems$ = this.cartItemsSubject.asObservable();
+
+  constructor() {
+
+  }
 
   addToCart(item: CartItem, quantityToAdd: number = 1) {
     const currentItems = this.cartItemsSubject.getValue();
@@ -56,6 +61,10 @@ export class CartService {
 
   getCartItems() {
     return this.cartItems$;
+  }
+
+  getCartAsJson(): string {
+    return JSON.stringify(this.cartItemsSubject.getValue(), null, 2);
   }
 
 }

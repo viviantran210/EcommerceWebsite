@@ -4,6 +4,7 @@ import { CartService } from '../../service/cart/cart.service';
 interface CartItem {
   id: number;
   name: string;
+  description: string;
   price: number;
   quantityInCart: number;
   quantityAvailable: number
@@ -13,6 +14,7 @@ interface CartItem {
 interface Product {
   productId: number;
   productName: string;
+  description: string;
   price: number;
   productQty: number;
   productImgUrl: string;
@@ -37,6 +39,7 @@ export class AddToCartButtonComponent {
       id: this.product.productId,
       name: this.product.productName,
       price: this.product.price,
+      description: this.product.description,
       quantityInCart: this.quantity,
       quantityAvailable: this.product.productQty,
       imageUrl: this.product.productImgUrl

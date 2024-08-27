@@ -4,11 +4,13 @@ import { CartService } from '../../service/cart/cart.service'
 import { Observable, Subscription } from 'rxjs';
 import  { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
+import Cookies from 'typescript-cookie';
 
 interface CartItem {
   id: number;
   name: string;
   price: number;
+  description: string;
   quantityInCart: number;
   quantityAvailable: number;
   imageUrl: string;
