@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { getCookie, setCookie } from 'typescript-cookie';
 
 interface CartItem {
   id: number;
@@ -19,7 +20,7 @@ export class CartService {
   cartItems$ = this.cartItemsSubject.asObservable();
 
   constructor() {
-
+    this.loadCartFromCookies();
   }
 
   addToCart(item: CartItem, quantityToAdd: number = 1) {
@@ -34,6 +35,7 @@ export class CartService {
     }
 
     this.cartItemsSubject.next([...currentItems]);
+    this.saveCartToCookies();
   }
 
   removeFromCart(itemId: number, quantity: number = 1) {
@@ -48,6 +50,7 @@ export class CartService {
       }
 
       this.cartItemsSubject.next([...currentItems]);
+      this.saveCartToCookies();
     }
   }
 
@@ -65,6 +68,21 @@ export class CartService {
 
   getCartAsJson(): string {
     return JSON.stringify(this.cartItemsSubject.getValue(), null, 2);
+  }
+
+  private saveCartToCookies() {
+    const cartJson = JSON.stringify(this.cartItemsSubject.getValue(), null, 2);
+    const expirationDate = new Date();
+    expirationDate.setFullYear(expirationDate.getFullYear() + 1);
+    setCookie('cart', cartJson, { expires: expirationDate });
+  }
+
+  private loadCartFromCookies() {
+    const cartJson = getCookie('cart');
+    if (cartJson) {
+      const cartItems: CartItem[] = JSON.parse(cartJson);
+      this.cartItemsSubject.next(cartItems);
+    }
   }
 
 }
