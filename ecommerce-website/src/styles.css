@@ -12,3 +12,14 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
     font-size: 1.5rem; /* Adjust font size for smaller screens */
   }
 }
+
+button[mat-raised-button] {
+  background-color: var(--blue);
+  width: 10rem;
+  height: 3rem;
+  color: white;
+  border-radius: 1.5rem;
+  border: none;
+  padding: 0.5rem;
+  margin-left: 0.3rem;
+}
