@@ -1,16 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CartService } from '../../service/cart/cart.service';
 
-interface CartItem {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  quantityInCart: number;
-  quantityAvailable: number
-  imageUrl: string;
-}
-
 interface Product {
   productId: number;
   productName: string;
