@@ -36,5 +36,8 @@
     <h2>Order Summary</h2>
     <p>Subtotal ({{ numItems }} items)</p>
     <p><b>Total:  </b>{{ totalCost | currency }}</p>
+    <button mat-raised-button (click)='goToCheckout()'>
+      <b>Check out</b>
+    </button>
   </div>
 </div>

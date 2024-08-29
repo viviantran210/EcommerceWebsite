@@ -4,8 +4,7 @@ import { CartService } from '../../service/cart/cart.service'
 import { Observable, Subscription } from 'rxjs';
 import  { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
-import Cookies from 'typescript-cookie';
-
+import { Router } from '@angular/router';
 interface CartItem {
   id: number;
   name: string;
@@ -23,7 +22,7 @@ interface CartItem {
     CommonModule,
     CurrencyPipe,
     MatDividerModule,
-    MatCardModule
+    MatCardModule,
   ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
@@ -34,7 +33,7 @@ export class CartComponent implements OnInit, OnDestroy{
   totalCost: number = 0;
   private cartSubscription!: Subscription;
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private router: Router) {}
 
   ngOnInit() {
     this.cartList$ = this.cartService.getCartItems();
@@ -54,6 +53,10 @@ export class CartComponent implements OnInit, OnDestroy{
     if (item.quantityAvailable > 1) {
       this.cartService.removeFromCart(item.id);
     }
+  }
+
+  goToCheckout() {
+    this.router.navigate(['/checkout']);
   }
 
   ngOnDestroy(): void {
