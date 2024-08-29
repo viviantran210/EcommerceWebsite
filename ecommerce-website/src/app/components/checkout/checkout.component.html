@@ -1,0 +1,94 @@
+<h1>Check Out</h1>
+<div class="stepper-container">
+  <mat-stepper orientation="vertical" [linear]="false" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out your name and email</ng-template>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Full Name" formControlName="nameCtrl" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="email@domain.com" formControlName="emailCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your shipping information</ng-template>
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="addressCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Apt, Suite</mat-label>
+          <input matInput formControlName="suiteCtrl" placeholder="Optional">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>City</mat-label>
+          <input matInput formControlName="cityCtrl" placeholder="City" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>State</mat-label>
+          <input matInput formControlName="stateCtrl" placeholder="State" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Zip Code</mat-label>
+          <input matInput formControlName="zipCtrl" placeholder="Zip Code" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup">
+      <form [formGroup]="thirdFormGroup">
+        <ng-template matStepLabel>Fill out your discount code</ng-template>
+        <mat-form-field>
+          <mat-label>Discount Code</mat-label>
+          <input matInput placeholder="Optional" formControlName="discountCtrl">
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="fourthFormGroup">
+      <form [formGroup]="fourthFormGroup">
+        <ng-template matStepLabel>Fill out your payment details</ng-template>
+        <mat-form-field>
+          <mat-label>Card number</mat-label>
+          <input matInput formControlName="cardCtrl" placeholder="1234 1234 1234 1234" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Expiration Date</mat-label>
+          <input matInput formControlName="expirationDateCtrl" placeholder="MM/YY" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>CVC</mat-label>
+          <input matInput formControlName="cvcCtrl" placeholder="123" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div class="button-container">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+        <button mat-button> Submit </button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</div>
