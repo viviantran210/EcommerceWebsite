@@ -36,7 +36,7 @@
     <h2>Order Summary</h2>
     <p>Subtotal ({{ numItems }} items)</p>
     <p><b>Total:  </b>{{ totalCost | currency }}</p>
-    <button mat-raised-button (click)='goToCheckout()'>
+    <button mat-raised-button (click)="goToCheckout()" [disabled]="(cartList$ | async)?.length === 0">
       <b>Check out</b>
     </button>
   </div>
