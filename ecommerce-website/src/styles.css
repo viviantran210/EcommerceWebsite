@@ -22,4 +22,21 @@ button[mat-raised-button] {
   border: none;
   padding: 0.5rem;
   margin-left: 0.3rem;
+  cursor: pointer;
+}
+
+button[disabled] {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+button[disabled] mat-raised-button {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+button[disabled]:hover {
+  background-color: #e0e0e0;
 }
