@@ -1,0 +1,21 @@
+<div class="search-container">
+  <h2>Search Results for "{{ searchQuery }}"</h2>
+
+  <div *ngIf="searchResults$ | async as searchResults">
+    <div *ngIf="searchResults.length > 0; else noResults">
+      <p> Showing {{ searchResults.length }} of {{ totalProducts }} products</p>
+      <div class="product-grid">
+        <div *ngFor="let product of searchResults" class="product-box" (click)="navigateToProduct(product.productCategory, product.productId)">
+          <img [src]="product.productImgUrl" [alt]="product.productName">
+          <h3 class="product-title">{{ product.productName }}</h3>
+          <p class="product-price">{{ product.price | currency }}</p>
+          <app-add-to-cart-button [product]="product"></app-add-to-cart-button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noResults>
+    <p>No search results found for "{{ searchQuery }}".</p>
+  </ng-template>
+</div>

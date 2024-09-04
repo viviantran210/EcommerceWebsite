@@ -40,4 +40,23 @@ export class ProductService {
       return throwError(() => new Error('Product not found or does not match the category.'));
     }
   }
+
+  getProductsBySearch(query: string): Observable<any> {
+    this.setProductList();
+    const queryWords = query.toLowerCase().split(' ');
+
+    const filteredProducts = this.productList.filter(product =>
+      queryWords.some((word: string) =>
+        product.keywords.some((keyword: string) => keyword.toLowerCase().includes(word)) ||
+        product.productName.toLowerCase().includes(word) ||
+        product.productCategory.toLowerCase().includes(word)
+      )
+    );
+    return of(filteredProducts);
+  }
+
+  getNumberOfProducts(): number {
+    this.setProductList();
+    return this.productList.length;
+  }
 }

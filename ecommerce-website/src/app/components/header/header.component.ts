@@ -45,6 +45,12 @@ export class HeaderComponent implements OnInit, OnDestroy{
     this.router.navigate([categoryName.toLowerCase()]);
   }
 
+  public onSearch(): void {
+    if (this.searchQuery.trim()) {
+      this.router.navigate(['/search'], { queryParams: { q: this.searchQuery } });
+    }
+  }
+
   ngOnDestroy(): void {
     if (this.cartSub) {
       this.cartSub.unsubscribe();
