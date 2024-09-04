@@ -3,7 +3,7 @@
 
   <div *ngIf="searchResults$ | async as searchResults">
     <div *ngIf="searchResults.length > 0; else noResults">
-      <p> Showing {{ searchResults.length }} of {{ totalProducts }} products</p>
+      <p> Showing {{ searchResults.length }} products</p>
       <div class="product-grid">
         <div *ngFor="let product of searchResults" class="product-box" (click)="navigateToProduct(product.productCategory, product.productId)">
           <img [src]="product.productImgUrl" [alt]="product.productName">

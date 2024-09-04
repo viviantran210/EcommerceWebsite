@@ -20,7 +20,6 @@ export class SearchComponent implements OnInit, OnDestroy {
   searchQuery: string = '';
   searchResults$!: Observable<any>;
   private querySubscription = new Subscription();
-  totalProducts: number = 0;
 
   constructor(
     private productService: ProductService,
@@ -37,7 +36,6 @@ export class SearchComponent implements OnInit, OnDestroy {
 
   private updateSearchResults(query: string): void {
     this.searchResults$ = this.productService.getProductsBySearch(query);
-    this.totalProducts = this.productService.getNumberOfProducts();
   }
 
   public navigateToProduct(categoryName: string, id: number) {

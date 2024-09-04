@@ -54,9 +54,4 @@ export class ProductService {
     );
     return of(filteredProducts);
   }
-
-  getNumberOfProducts(): number {
-    this.setProductList();
-    return this.productList.length;
-  }
 }
