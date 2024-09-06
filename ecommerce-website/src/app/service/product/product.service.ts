@@ -49,7 +49,8 @@ export class ProductService {
       queryWords.some((word: string) =>
         product.keywords.some((keyword: string) => keyword.toLowerCase().includes(word)) ||
         product.productName.toLowerCase().includes(word) ||
-        product.productCategory.toLowerCase().includes(word)
+        product.productCategory.toLowerCase().includes(word) ||
+        product.productDesc.toLowerCase().includes(word)
       )
     );
     return of(filteredProducts);
