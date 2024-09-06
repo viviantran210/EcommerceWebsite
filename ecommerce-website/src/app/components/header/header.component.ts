@@ -46,9 +46,13 @@ export class HeaderComponent implements OnInit, OnDestroy{
   }
 
   public onSearch(): void {
-    if (this.searchQuery.trim()) {
-      this.router.navigate(['/search'], { queryParams: { q: this.searchQuery } });
-    }
+    const specialChars = /[^a-zA-Z0-9\s]/;
+    if (specialChars.test(this.searchQuery)) {
+    alert('Search query contains special characters. Please remove them.');
+    return;
+  }
+
+  this.router.navigate(["/search"], { queryParams: { q: this.searchQuery } });
   }
 
   ngOnDestroy(): void {
