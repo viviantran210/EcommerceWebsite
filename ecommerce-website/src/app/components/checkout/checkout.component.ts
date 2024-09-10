@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import  {FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatButtonModule } from '@angular/material/button';
+import cardValidator from 'card-validator';
 
 @Component({
   selector: 'app-checkout',
@@ -14,7 +16,8 @@ import { MatButtonModule } from '@angular/material/button';
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    CommonModule
    ],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.css'
@@ -40,8 +43,9 @@ export class CheckoutComponent {
   });
 
   fourthFormGroup = this._formBuilder.group({
-    cardCtrl: ['', Validators.required],
-    expirationDateCtrl: ['', Validators.required],
-    cvcCtrl: ['', Validators.required]
+    cardCtrl: ['', [Validators.required, Validators.pattern('^[0-9]{16}$')]],
+    expirationDateCtrl: ['', [Validators.required, Validators.pattern('^(0[1-9]|1[0-2])\/\d{2}$')]],
+    cvvCtrl: ['', [Validators.required, Validators.pattern('^[0-9]{3}$')]]
   });
+
 }

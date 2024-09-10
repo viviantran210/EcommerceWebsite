@@ -11,6 +11,7 @@
         <mat-form-field>
           <mat-label>Email</mat-label>
           <input matInput placeholder="email@domain.com" formControlName="emailCtrl" required>
+          <mat-error *ngIf="firstFormGroup.get('emailCtrl')?.hasError('email')">Enter a valid email</mat-error>
         </mat-form-field>
         <div>
           <button mat-button matStepperNext>Next</button>
@@ -66,29 +67,24 @@
         <mat-form-field>
           <mat-label>Card number</mat-label>
           <input matInput formControlName="cardCtrl" placeholder="1234 1234 1234 1234" required>
+          <mat-error *ngIf="fourthFormGroup.get('cardCtrl')?.hasError('pattern')">Card number must be 16 digits</mat-error>
         </mat-form-field>
         <mat-form-field>
           <mat-label>Expiration Date</mat-label>
           <input matInput formControlName="expirationDateCtrl" placeholder="MM/YY" required>
+          <mat-error *ngIf="fourthFormGroup.get('expirationDateCtrl')?.hasError('pattern')">Expiration date must be in MM/YY format</mat-error>
         </mat-form-field>
         <mat-form-field>
-          <mat-label>CVC</mat-label>
-          <input matInput formControlName="cvcCtrl" placeholder="123" required>
+          <mat-label>CVV</mat-label>
+          <input matInput formControlName="cvvCtrl" placeholder="123" required>
+          <mat-error *ngIf="fourthFormGroup.get('cvvCtrl')?.hasError('pattern')">CVV must be 3 digits</mat-error>
         </mat-form-field>
-        <div>
+        <div class="button-container">
           <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+          <button mat-button> Submit </button>
         </div>
       </form>
-    </mat-step>
-    <mat-step>
-      <ng-template matStepLabel>Done</ng-template>
-      <p>You are now done.</p>
-      <div class="button-container">
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
-        <button mat-button> Submit </button>
-      </div>
     </mat-step>
   </mat-stepper>
 </div>
