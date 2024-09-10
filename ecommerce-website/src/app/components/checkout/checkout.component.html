@@ -67,7 +67,7 @@
         <mat-form-field>
           <mat-label>Card number</mat-label>
           <input matInput formControlName="cardCtrl" placeholder="1234 1234 1234 1234" required>
-          <mat-error *ngIf="fourthFormGroup.get('cardCtrl')?.hasError('pattern')">Card number must be 16 digits</mat-error>
+          <mat-error *ngIf="fourthFormGroup.get('cardCtrl')?.hasError('pattern')">Card number must be 15 or 16 digits</mat-error>
         </mat-form-field>
         <mat-form-field>
           <mat-label>Expiration Date</mat-label>
@@ -82,7 +82,7 @@
         <div class="button-container">
           <button mat-button matStepperPrevious>Back</button>
           <button mat-button (click)="stepper.reset()">Reset</button>
-          <button mat-button> Submit </button>
+          <button mat-button (click)="validateCard()"> Submit </button>
         </div>
       </form>
     </mat-step>

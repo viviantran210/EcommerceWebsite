@@ -23,6 +23,10 @@ import cardValidator from 'card-validator';
   styleUrl: './checkout.component.css'
 })
 export class CheckoutComponent {
+  cardNumberError = false;
+  expDateError = false;
+  cvvError = false;
+  cardError: string | null = null;
   constructor(private _formBuilder: FormBuilder) {}
 
   firstFormGroup = this._formBuilder.group({
@@ -43,9 +47,54 @@ export class CheckoutComponent {
   });
 
   fourthFormGroup = this._formBuilder.group({
-    cardCtrl: ['', [Validators.required, Validators.pattern('^[0-9]{16}$')]],
-    expirationDateCtrl: ['', [Validators.required, Validators.pattern('^(0[1-9]|1[0-2])\/\d{2}$')]],
+    cardCtrl: ['', [Validators.required, Validators.pattern('^[0-9]{15}(?:[0-9]{1})?$')]],
+    expirationDateCtrl: ['', [Validators.required, Validators.pattern('^(0[1-9]|1[0-2])\/[0-9]{2}$')]],
     cvvCtrl: ['', [Validators.required, Validators.pattern('^[0-9]{3}$')]]
   });
+
+  validateCard() {
+    const cardNumber = this.fourthFormGroup.value.cardCtrl;
+    const expirationDate = this.fourthFormGroup.value.expirationDateCtrl;
+    const cvv = this.fourthFormGroup.value.cvvCtrl;
+
+    const cardValidation = cardValidator.number(cardNumber);
+    if (!cardValidation.isValid) {
+      this.cardNumberError = true;
+    }
+
+    const expirationValidation = cardValidator.expirationDate(expirationDate);
+    if (!expirationValidation.isValid) {
+      this.expDateError = true
+    }
+
+    const cvvValidation = cardValidator.cvv(cvv);
+    if (!cvvValidation.isValid) {
+      this.cvvError = true;
+    }
+    if (!this.cardNumberError && !this.expDateError && !this.cvvError) {
+      this.cardError = null;
+    }
+    else {
+      this.cardError = "Card verification failed."
+      if (this.cardNumberError) {
+        this.cardError = this.cardError.concat(" Card number is not valid.");
+      }
+      if (this.expDateError) {
+        this.cardError = this.cardError.concat(" Expiration Date is not valid.");
+      }
+      if (this.cvvError) {
+        this.cardError = this.cardError.concat(" CVV number is not valid.");
+      }
+    }
+
+    this.onSubmit();
+  }
+
+  onSubmit() {
+    if (this.cardError) {
+      alert(this.cardError);
+      return;
+    }
+  }
 
 }
