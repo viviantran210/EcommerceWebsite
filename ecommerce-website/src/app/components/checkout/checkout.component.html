@@ -11,7 +11,7 @@
         <mat-form-field>
           <mat-label>Email</mat-label>
           <input matInput placeholder="email@domain.com" formControlName="emailCtrl" required>
-          <mat-error *ngIf="firstFormGroup.get('emailCtrl')?.hasError('email')">Enter a valid email</mat-error>
+          <mat-error *ngIf="firstFormGroup.get('emailCtrl')?.hasError('pattern')">Enter a valid email</mat-error>
         </mat-form-field>
         <div>
           <button mat-button matStepperNext>Next</button>

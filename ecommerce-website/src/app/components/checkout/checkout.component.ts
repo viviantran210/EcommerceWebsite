@@ -31,7 +31,7 @@ export class CheckoutComponent {
 
   firstFormGroup = this._formBuilder.group({
     nameCtrl: ['', Validators.required],
-    emailCtrl: ['', [Validators.required, Validators.email]]
+    emailCtrl: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$')]]
   });
 
   secondFormGroup = this._formBuilder.group({
