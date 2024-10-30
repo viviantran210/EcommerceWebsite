@@ -22,6 +22,10 @@ export const routes: Routes = [
     loadComponent: () => import('./components/checkout/checkout.component').then(m => m.CheckoutComponent)
   },
   {
+    path: 'all',
+    loadComponent: () => import('./components/categories/all/all.component').then(m => m.AllComponent)
+  },
+  {
     path: 'figures',
     loadComponent: () => import('./components/categories/figures/figures.component').then(m => m.FiguresComponent)
   },
