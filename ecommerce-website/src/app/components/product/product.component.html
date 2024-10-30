@@ -1,4 +1,9 @@
-<h1>{{ categoryName }}</h1>
+<h1 *ngIf="categoryName === 'All'; else categoryNameTemplate">
+  All Products
+</h1>
+<ng-template #categoryNameTemplate>
+  <h1>{{ categoryName }}</h1>
+</ng-template>
 <div class="product-grid">
   <div *ngFor="let product of productList" class="product-box" (click)="navigateToProduct(product.productId)">
     <img [src]="product.productImgUrl" [alt]="product.productName">
