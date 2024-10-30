@@ -25,7 +25,10 @@ export class ProductService {
   }
 
   getProductsByCategory(categoryName: string) {
-    this.setProductList()
+    this.setProductList();
+    if (categoryName == "all") {
+      return this.productList;
+    }
     return this.productList.filter((p) => p.productCategory.toLowerCase() == categoryName);
   }
 
