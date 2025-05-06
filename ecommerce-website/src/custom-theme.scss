@@ -52,3 +52,7 @@ button[disabled] {
 button[disabled]:hover {
   background-color: #e0e0e0;
 }
+
+button[mat-raised-button]:focus {
+  outline: none;
+}
