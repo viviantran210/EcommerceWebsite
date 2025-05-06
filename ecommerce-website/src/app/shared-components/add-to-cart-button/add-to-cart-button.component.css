@@ -1,1 +1,3 @@
-
+button[mat-raised-button]:focus {
+  outline: none;
+}
